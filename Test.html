@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<h1>
+  Sample Screen
+</h1>
+<input type="text" id="thongTin">
+<input type="button" id="add" value="Add" onclick="themGiaTri()">
+<input type="button" id="display" value="Display" onclick="showGiaTri()">
+<div id="show"></div>
+</body>
+<script>
+    let array = Array();
+    let x = 0;
+    function themGiaTri(){
+        array[x] = document.getElementById("thongTin").value;
+        alert("Nhập giá trị vị trí thứ " + x + " trong array là " + array[x])
+        x++;
+    }
+    function showGiaTri(){
+        let e = "<hr>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br>"
+            document.getElementById("show").innerHTML = e
+        }
+    }
+</script>
+</html>
