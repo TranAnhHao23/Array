@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Bài 1
+    // let myColor = ["Red", "Green", "White", "Black"];
+    // document.write(myColor.toString())
+    // document.write("<br>")
+    // document.write(myColor.join(" - "))
+
+    // Bài 2
+    // let num1 = prompt("Nhập vào số cần chuyển đổi")
+    // let str = [num1[0]]
+    //
+    // console.log(num1)
+    // console.log(num1.length)
+    // console.log(num1[0])
+    // console.log(num1[1])
+    // for (let i = 0; i < num1.length; i++) {
+    //     if (num1[i] % 2 == 0 && num1[i+1] % 2 == 0){
+    //         str.push("-",num1[i+1])
+    //     }
+    //     else {
+    //         str.push(num1[i+1])
+    // }
+    // }
+    // console.log(str.join(''))
+
+    // Bài 3
+    let upStr = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890 "
+    let lowStr = "qwertyuiopasdfghjklzxcvbnm1234567890 "
+    let nhap = prompt("nhập đến chết")
+    let result = [' '];
+
+    for (let i = 0; i < nhap.length; i++) {
+        for (let j = 0; j < upStr.length; j++) {
+            switch (nhap[i]) {
+                case upStr[j]:
+                    // nhap[i] = lowStr[j];
+                    result.push(lowStr[j]);
+                    break;
+                case lowStr[j]:
+                    // nhap[i] = upStr[j];
+                    result.push(upStr[j]);
+                    break;
+            }
+        }
+    }
+    document.write(result.join(''))
+
+
+</script>
+</html>

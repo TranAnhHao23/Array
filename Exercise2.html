@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic-Tac-Toe</title>
+</head>
+<style>
+    table,tr,td {
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+    table{
+        width: 60px;
+        height: 60px;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p id="result"></p>
+<p><input type="button" value="Player X" id="xForce">
+    <input type="button" value="Player Y" id="yForce">
+</p>
+
+</body>
+<script>
+    // let x = prompt("nhập x, làm ơn thông minh tý")
+    // let y = prompt("nhập y, làm ơn thông minh tý")
+    let board = [
+        ['...','...','...'],
+        ['...','...','...'],
+        ['...','...','...']
+    ];
+    let print = '';
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            print += board[i][j] + "&nbsp;&nbsp;";
+        }
+        print += "<br>"
+    }
+    document.getElementById("result").innerHTML = print
+
+    board[x][y] = "x";
+    document.getElementById("result").innerHTML = print
+
+
+
+
+</script>
+</html>

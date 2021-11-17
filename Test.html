@@ -5,15 +5,42 @@
     <title>Test</title>
 </head>
 <body>
-<h1>
-  Sample Screen
-</h1>
+<h1> Số lớn thứ 2</h1>
 
 </body>
 <script>
-    let a = +prompt("Nhập số nhé");
-    alert(isNaN(a) )
-    let b = a- 1;
-    alert(b)
+    let arrs = [4, 7, 9, 5, 0, 6, 8, 1, 2, 3]
+    let max = arrs[0];
+    let secondMax = arrs[1];
+
+    for (let i = 0; i < arrs.length; i++) {
+        if ( max < arrs[i]){
+            secondMax = max
+            max = arrs[i]
+            }
+        }
+    console.log(secondMax)
+    document.write(secondMax + "<br>")
+    document.write(max)
+
+
+    // let arrs = [7, 4, 9, 5, 0, 6, 1, 2, 8, 3]
+    // let max = arrs[0];
+    // let secondMax = arrs[1];
+    //
+    // for (let i = 0; i < arrs.length; i++) {
+    //     if (secondMax < arrs[i]){
+    //         secondMax = arrs[i]
+    //         if (max < secondMax){
+    //             secondMax = max
+    //             max = arrs[i]
+    //         }
+    //     }
+    // }
+    // console.log(secondMax)
+    // document.write(secondMax + "<br>");
+    // document.write(max)
+    // console.log(arrs)
 </script>
+
 </html>
