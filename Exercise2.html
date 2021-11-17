@@ -18,12 +18,13 @@
 
 </body>
 <script>
-    let board = []
+    let board = [];
+    let inAn = " ";
     for (let i = 0; i < 3; i++) {
         board[i] = [".", ".", "."]
     }
     console.log(board)
-    let inAn = " ";
+
 
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board[i].length; j++) {
@@ -33,37 +34,37 @@
     }
     document.getElementById("inBoard").innerHTML = inAn
 
-    function choiGameX(){
-        let x = +prompt("Nhập x")
-        let y = +prompt("Nhập y")
-        for (let i = 0; i < board.length; i++) {
-            for (let j = 0; j < board[i].length; j++) {
-                if (i == x && j == y){
-                    inAn += "x";
-                } else {
-                    inAn += board[i][j] +"&ensp;"
-                }
-            }
-            inAn += "<br>"
-        }
-        document.getElementById("inBoard").innerHTML = inAn
-    }
-    function choiGameO(){
-        let inAn = " ";
-        let x = +prompt("Nhập x")
-        let y = +prompt("Nhập y")
-        for (let i = 0; i < board.length; i++) {
-            for (let j = 0; j < board[i].length; j++) {
-                if (i == x && j == y){
-                    inAn += "O";
-                } else {
-                    inAn += board[i][j] +"&ensp;"
-                }
-            }
-            inAn += "<br>"
-        }
-        document.getElementById("inBoard").innerHTML = inAn
-    }
+    // function choiGameX(){
+    //     let x = +prompt("Nhập x")
+    //     let y = +prompt("Nhập y")
+    //     for (let i = 0; i < board.length; i++) {
+    //         for (let j = 0; j < board[i].length; j++) {
+    //             if (i == x && j == y){
+    //                 inAn += "x";
+    //             } else {
+    //                 inAn += board[i][j] +"&ensp;"
+    //             }
+    //         }
+    //         inAn += "<br>"
+    //     }
+    //     document.getElementById("inBoard").innerHTML = inAn
+    // }
+    // function choiGameO(){
+    //     let inAn = " ";
+    //     let x = +prompt("Nhập x")
+    //     let y = +prompt("Nhập y")
+    //     for (let i = 0; i < board.length; i++) {
+    //         for (let j = 0; j < board[i].length; j++) {
+    //             if (i == x && j == y){
+    //                 inAn += "O";
+    //             } else {
+    //                 inAn += board[i][j] +"&ensp;"
+    //             }
+    //         }
+    //         inAn += "<br>"
+    //     }
+    //     document.getElementById("inBoard").innerHTML = inAn
+    // }
 
 
 

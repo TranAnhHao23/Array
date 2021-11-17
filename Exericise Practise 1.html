@@ -81,16 +81,18 @@
     // }
     //
     // Bài 7
-    // let arrs7 = [10, -12, 43, 5, -6, 14, 7, -12, 11, 9, 21];
-    // let num2 = +prompt("Con số nào đây là con số nào đây")
-    // for (let i = 0; i < arrs7.length; i++) {
-    //     if (arrs7[i] == num2){
-    //         for (let j = i; j < arrs7.length; j++) {
-    //             arrs7[j] = arrs7[j + 1];
-    //         }
-    //     }
-    // }
-    // console.log(arrs7)
+    let arrs7 = [10, -12, -12, 5, -6, 14, 7, -12, 11, 9, 21];
+    let num2 = +prompt("Con số nào đây là con số nào đây")
+    for (let i = 0; i < arrs7.length; i++) {
+        if (arrs7[i] == num2){
+            for (let j = i; j < arrs7.length-1; j++) {
+                arrs7[j] = arrs7[j+1]
+                arrs7[j + 1] = 0;
+            }
+            i--;document.getElementById('ketQua').innerHTML = fake
+        }
+    }
+    document.write(arrs7.join())
     // Bài 8
     // let arrs8 = [10, -12, 43, 5, -6, 14, 7, -12, 11, 9, 21];
     // let temp = 0;
